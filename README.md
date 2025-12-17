@@ -1,31 +1,66 @@
 # STM32 DSP
-## I. Real-Time Software Implementation of Analog Filters (RC low pass filter)
-### 1. Overview
-#### Analog filter
-![image](./Tutorial_imgs/Picture4.png)
-![image](./Tutorial_imgs/Picture3.png)
-|Linh kiện|Công thức|
-|:--------|:--------|
-|R|$$ i = \frac{V_1 - V_2}{R} $$|
-|C|$$ i = C\frac{d(V_1 - V_2)}{dt} $$|
-|L|$$ i = \frac{1}{L} \int (V_1 - V_2) \, dt $$|
-#### Digital filter
-![image](./Tutorial_imgs/Picture2.png)
-- dễ dàng triển khai, thay đổi tham số của bộ lọc
-- giá thành thấp
+## I. Thêm tư viện CMSIS-DSP
 
-### Example: RC low-Pass filter
-#### Theory
-![image](./Tutorial_imgs/Picture1.png)
-$$ V_{out} + RC\frac{d(V_{out})}{dt}  = V_{in} $$
-- Định luật Euler lùi
-$$ \frac{d(V)}{dt} \approx \frac{V_n - V_{n-1}}{T} $$
-- RC lo
-$$ V_{out} [n] = \frac{T}{T+RC} V_{in} [n] + \frac{RC}{T+RC} V_{out} [n-1] $$
-- Đáp ứng của bộ lọc
-$$ f_{-3dB} = \frac{T}{2 \pi RC}$$
-#### Implement software
-`.\Tutorial-Templates\001_RCFilter`
-## Z transform
+### 1. Cấu trúc một project
 
+- Copy folders in the created folder
+    - <STM32Cube_Repository>\STM32Cube_FW_F4_V1.28.0\Drivers\CMSIS\DSP\Include
+    - <STM32Cube_Repository>\STM32Cube_FW_F4_V1.28.0\Drivers\CMSIS\DSP\PrivateInclude
+    - <STM32Cube_Repository>\STM32Cube_FW_F4_V1.28.0\Drivers\CMSIS\DSP\Source
 
+![image](./Images/P1.png)
+
+### 2. Add include path
+![image](./Images/P2.png)
+
+### 3. Chỉnh sửa file 
+- Open SupportFunctions.c and SupportFunctionsF16.c files and comment these lines of code:
+    - SupportFunctions.c 
+    ``` C
+    #include "arm_barycenter_f32.c"
+    #include "arm_bitonic_sort_f32.c"
+    #include "arm_bubble_sort_f32.c"
+    #include "arm_copy_f32.c"
+    #include "arm_copy_f64.c"
+    #include "arm_copy_q15.c"
+    #include "arm_copy_q31.c"
+    #include "arm_copy_q7.c"
+    #include "arm_fill_f32.c"
+    #include "arm_fill_f64.c"
+    #include "arm_fill_q15.c"
+    #include "arm_fill_q31.c"
+    #include "arm_fill_q7.c"
+    #include "arm_heap_sort_f32.c"
+    #include "arm_insertion_sort_f32.c"
+    #include "arm_merge_sort_f32.c"
+    #include "arm_merge_sort_init_f32.c"
+    #include "arm_quick_sort_f32.c"
+    #include "arm_selection_sort_f32.c"
+    #include "arm_sort_f32.c"
+    #include "arm_sort_init_f32.c"
+    #include "arm_weighted_sum_f32.c"
+
+    #include "arm_float_to_q15.c"
+    #include "arm_float_to_q31.c"
+    #include "arm_float_to_q7.c"
+    #include "arm_q15_to_float.c"
+    #include "arm_q15_to_q31.c"
+    #include "arm_q15_to_q7.c"
+    #include "arm_q31_to_float.c"
+    #include "arm_q31_to_q15.c"
+    #include "arm_q31_to_q7.c"
+    #include "arm_q7_to_float.c"
+    #include "arm_q7_to_q15.c"
+    #include "arm_q7_to_q31.c"
+    ```
+    - SupportFunctionsF16.c
+    ``` C
+    #include "arm_copy_f16.c"
+    #include "arm_fill_f16.c"
+    #include "arm_f16_to_q15.c"
+    #include "arm_f16_to_float.c"
+    #include "arm_q15_to_f16.c"
+    #include "arm_float_to_f16.c"
+    #include "arm_weighted_sum_f16.c"
+    #include "arm_barycenter_f16.c"
+    ```
