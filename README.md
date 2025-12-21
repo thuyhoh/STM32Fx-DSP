@@ -1,19 +1,33 @@
 # STM32 DSP
-## I. Thêm tư viện CMSIS-DSP
+## I. Thêm tư viện CMSIS-DSP cho STM32F4
 
-### 1. Cấu trúc một project
+### 1. Including the DSP libraries and header files
+- Thư viện CMSIS-DSP Lib: `.\CMSIS-DSP_Lib`
+- Cấu trúc của một project
 
-- Copy folders in the created folder
-    - <STM32Cube_Repository>\STM32Cube_FW_F4_V1.28.0\Drivers\CMSIS\DSP\Include
-    - <STM32Cube_Repository>\STM32Cube_FW_F4_V1.28.0\Drivers\CMSIS\DSP\PrivateInclude
-    - <STM32Cube_Repository>\STM32Cube_FW_F4_V1.28.0\Drivers\CMSIS\DSP\Source
 
 ![image](./Images/P1.png)
 
-### 2. Add include path
-![image](./Images/P2.png)
+### 2. Include paths
+- Select the project from the Project Explorer section
+- From Project menu or File menu, go to Project properties > C/C++ Build > Settings > Tool Settings > MCU GCC Compiler > Include paths.
+- Click on “Add” to include the new paths.
+- Add ../Drivers/CMSIS/DSP/Include path
 
-### 3. Chỉnh sửa file 
+![image](./Images/P2.jpg)
+### 3. Update libraries
+- Thêm đường dẫn thư viện
+    -  Project Explorer section > Project Properties > C/C++ Build > Settings > Tool Settings > MCU CGC Linker > Libraries > Library search Path > Add.
+    - chọn GCC library path: `../Drivers/CMSIS/Lib/GCC`
+
+- Thêm thư viện 
+    - chọn thư viện DSP cho ARM cortex Mx: bỏ lib của file thư viện .a
+    ![image](./Images/P4.png)
+    - Thêm thư viện: Project Explorer section > Properties > C/C++ Build > Settings > Tool Settings > MCU CGC Linker > Libraries > Libraries (-l) > add
+    ![image](./Images/P3.jpg)
+
+
+### 4. Update file source
 - Open SupportFunctions.c and SupportFunctionsF16.c files and comment these lines of code:
     - SupportFunctions.c 
     ``` C
