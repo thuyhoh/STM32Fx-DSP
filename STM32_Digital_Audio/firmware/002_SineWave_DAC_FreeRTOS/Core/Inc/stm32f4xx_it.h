@@ -55,7 +55,10 @@ void DebugMon_Handler(void);
 void DMA1_Stream5_IRQHandler(void);
 void DMA1_Stream6_IRQHandler(void);
 void TIM8_TRG_COM_TIM14_IRQHandler(void);
+<<<<<<< HEAD
 void TIM6_DAC_IRQHandler(void);
+=======
+>>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

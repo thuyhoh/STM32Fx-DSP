@@ -57,8 +57,11 @@
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_dac1;
 extern DMA_HandleTypeDef hdma_dac2;
+<<<<<<< HEAD
 extern DAC_HandleTypeDef hdac;
 extern TIM_HandleTypeDef htim6;
+=======
+>>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
 extern TIM_HandleTypeDef htim14;
 
 /* USER CODE BEGIN EV */
@@ -205,6 +208,7 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
   /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */
 }
 
+<<<<<<< HEAD
 /**
   * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
   */
@@ -220,6 +224,8 @@ void TIM6_DAC_IRQHandler(void)
   /* USER CODE END TIM6_DAC_IRQn 1 */
 }
 
+=======
+>>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
