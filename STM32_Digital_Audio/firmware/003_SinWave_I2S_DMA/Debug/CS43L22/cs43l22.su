@@ -1,0 +1,7 @@
+../CS43L22/cs43l22.c:34:18:cs_read_register	40	static
+../CS43L22/cs43l22.c:43:18:cs_write_register	40	static
+../CS43L22/cs43l22.c:55:18:cs_init	32	static
+../CS43L22/cs43l22.c:117:6:cs_enable	16	static
+../CS43L22/cs43l22.c:122:6:cs_disable	16	static
+../CS43L22/cs43l22.c:127:18:cs_mas_vol	16	static
+../CS43L22/cs43l22.c:148:18:cs_hp_vol	16	static
