@@ -146,12 +146,10 @@ void HAL_DAC_MspInit(DAC_HandleTypeDef* hdac)
 
     __HAL_LINKDMA(hdac,DMA_Handle2,hdma_dac2);
 
-<<<<<<< HEAD
     /* DAC interrupt Init */
     HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
-=======
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
+
     /* USER CODE BEGIN DAC_MspInit 1 */
 
     /* USER CODE END DAC_MspInit 1 */
@@ -185,7 +183,6 @@ void HAL_DAC_MspDeInit(DAC_HandleTypeDef* hdac)
     /* DAC DMA DeInit */
     HAL_DMA_DeInit(hdac->DMA_Handle1);
     HAL_DMA_DeInit(hdac->DMA_Handle2);
-<<<<<<< HEAD
 
     /* DAC interrupt DeInit */
     /* USER CODE BEGIN DAC:TIM6_DAC_IRQn disable */
@@ -196,8 +193,6 @@ void HAL_DAC_MspDeInit(DAC_HandleTypeDef* hdac)
     /* HAL_NVIC_DisableIRQ(TIM6_DAC_IRQn); */
     /* USER CODE END DAC:TIM6_DAC_IRQn disable */
 
-=======
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
     /* USER CODE BEGIN DAC_MspDeInit 1 */
 
     /* USER CODE END DAC_MspDeInit 1 */
@@ -220,12 +215,11 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     /* USER CODE END TIM6_MspInit 0 */
     /* Peripheral clock enable */
     __HAL_RCC_TIM6_CLK_ENABLE();
-<<<<<<< HEAD
+
     /* TIM6 interrupt Init */
     HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
-=======
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
+
     /* USER CODE BEGIN TIM6_MspInit 1 */
 
     /* USER CODE END TIM6_MspInit 1 */
@@ -249,7 +243,6 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
     /* USER CODE END TIM6_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_TIM6_CLK_DISABLE();
-<<<<<<< HEAD
 
     /* TIM6 interrupt DeInit */
     /* USER CODE BEGIN TIM6:TIM6_DAC_IRQn disable */
@@ -260,8 +253,6 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
     /* HAL_NVIC_DisableIRQ(TIM6_DAC_IRQn); */
     /* USER CODE END TIM6:TIM6_DAC_IRQn disable */
 
-=======
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
     /* USER CODE BEGIN TIM6_MspDeInit 1 */
 
     /* USER CODE END TIM6_MspDeInit 1 */

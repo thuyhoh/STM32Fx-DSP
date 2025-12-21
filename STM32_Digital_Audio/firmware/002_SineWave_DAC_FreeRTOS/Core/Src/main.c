@@ -150,10 +150,7 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim6);
-<<<<<<< HEAD
 
-=======
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
   HAL_DAC_Start_DMA(&hdac, DAC1_CHANNEL_1, (uint32_t *)&dma_buffer_1, 2*DMA_BUFFER_SIZE, DAC_ALIGN_12B_R);
   HAL_DAC_Start_DMA(&hdac, DAC1_CHANNEL_2, (uint32_t *)&dma_buffer_2, 2*DMA_BUFFER_SIZE, DAC_ALIGN_12B_R);
   /* USER CODE END 2 */
@@ -383,7 +380,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-<<<<<<< HEAD
 void HAL_DAC_ConvHalfCpltCallbackCh1(DAC_HandleTypeDef *hdac) {
     //++conv_half_ch1;
     dacs[0].buffer = &dma_buffer_1[0];
@@ -411,18 +407,6 @@ void HAL_DACEx_ConvCpltCallbackCh2(DAC_HandleTypeDef *hdac) {
     uint32_t dac_addr = (uint32_t) &dacs[1];
     osMessageQueuePut(sineQueueHandle, &dac_addr, 0, 0);
 }
-=======
-void HAL_DAC_ConvCpltCallbackCh1(DAC_HandleTypeDef *hdac)
-{
-//	do_dac(dma_buff[DMA_BUFFER_SIZE]);
-}
-
-void HAL_DAC_ConvHalfCpltCallbackCh1(DAC_HandleTypeDef *hdac)
-{
-//	do_dac(dma_buff[0]);
-}
-
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
 
 /* USER CODE END 4 */
 
@@ -436,7 +420,7 @@ void HAL_DAC_ConvHalfCpltCallbackCh1(DAC_HandleTypeDef *hdac)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-<<<<<<< HEAD
+
 	uint32_t loop_cnt = 0;
 
 	    /* Infinite loop */
@@ -453,13 +437,7 @@ void StartDefaultTask(void *argument)
 
 		++loop_cnt;
 	}
-=======
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
+
   /* USER CODE END 5 */
 }
 
@@ -473,7 +451,7 @@ void StartDefaultTask(void *argument)
 void StartSineTask(void *argument)
 {
   /* USER CODE BEGIN StartSineTask */
-<<<<<<< HEAD
+
 	osStatus_t ret;
 
 	uint32_t sine_p;
@@ -506,13 +484,7 @@ void StartSineTask(void *argument)
 		}
 
 	}
-=======
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
->>>>>>> 402633ed3b82c23daf17f00d29244d7fd4ff2667
+
   /* USER CODE END StartSineTask */
 }
 
