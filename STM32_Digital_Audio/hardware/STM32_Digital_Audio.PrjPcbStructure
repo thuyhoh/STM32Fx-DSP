@@ -1,0 +1,7 @@
+Record=TopLevelDocument|FileName=1_Power.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=1_Power.SchDoc|FileName=2_MCU.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=1_Power.SchDoc|FileName=3_Memory.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=1_Power.SchDoc|FileName=4_USB-HS.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=1_Power.SchDoc|FileName=5_Periperals.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=1_Power.SchDoc|FileName=6_CODEC.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=1_Power.SchDoc|FileName=7_Analogue.SchDoc|SheetNumber=7
